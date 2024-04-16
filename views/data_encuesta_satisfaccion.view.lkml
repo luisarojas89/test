@@ -47,6 +47,20 @@ view: data_encuesta_satisfaccion {
     type: string
     sql: ${TABLE}.`QUEUE NAME` ;;
   }
+
+  ### Filtro
+  measure: count_llamadas {
+    type: count
+    drill_fields: []
+    filters: [queue_name: "LINEA DE ENTRADA"]
+  }
+
+  measure: count_chats {
+    type: count
+    drill_fields: []
+    filters: [queue_name: "CHATS"]
+  }
+
   dimension: surveys {
     type: string
     sql: ${TABLE}.SURVEYS ;;

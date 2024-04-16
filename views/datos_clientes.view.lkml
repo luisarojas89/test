@@ -13,6 +13,17 @@ view: datos_clientes {
     type: string
     sql: ${TABLE}.dtc_empresa ;;
   }
+
+  # Variables liquida buscar en Google (categórica)
+  dimension: empresa_icon {
+    sql: ${dtc_empresa};;
+    link: {
+      label: "Google"
+      url: "https://www.google.com/search?q={{ value }}"
+      icon_url: "https://google.com/favicon.ico"
+    }
+  }
+
   dimension: dtc_estado_aprobado {
     type: yesno
     sql: ${TABLE}.dtc_estado_aprobado ;;
