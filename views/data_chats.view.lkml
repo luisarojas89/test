@@ -54,7 +54,8 @@ view: data_chats {
     type: string
     sql: ${TABLE}.`SERVICE LEVEL 30SEG` ;;
   }
-  measure: count {
-    type: count
+  measure: total {
+    type: sum
+    sql: ${answer_calls} ;;
   }
 }

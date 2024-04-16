@@ -34,8 +34,8 @@ explore: data_llamada_hora {}
 
 explore: data_motivos_chats {
   join: data_motivos_llamadas {
-    type: left_outer
-    sql_on: ${data_motivos_chats.id_customer}=${data_motivos_llamadas.id_customer} ;;
+    type: inner
+    sql_on: ${data_motivos_chats.date} = ${data_motivos_llamadas.date};;
     relationship: one_to_one
   }
 }
