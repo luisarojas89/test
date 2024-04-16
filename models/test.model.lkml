@@ -48,7 +48,10 @@ explore: data_tratos {}
 
 explore: datos_clientes {}
 
-explore: datos_solicitudes {}
+explore: datos_solicitudes { access_filter: {
+    field: producto
+    user_attribute: producto_avanzo
+  }  }
 
 explore: datos_usuarios {}
 
