@@ -48,11 +48,12 @@ explore: data_tratos {}
 
 explore: datos_clientes {}
 
-explore: datos_solicitudes { access_filter: {
-    field: producto
-    user_attribute: producto_avanzo
-  }  }
-
+explore: datos_solicitudes {
+    #access_filter: {
+    #field: producto
+    #user_attribute: producto_avanzo
+  #}
+}
 explore: datos_usuarios {}
 
 explore: historico_administracion_mensual {}
@@ -64,3 +65,6 @@ explore: historico_desembolso_mensual {}
 explore: historico_estado_cliente {}
 
 explore: historico_solicitud_mensual {}
+
+# Ver tabla derivada creada con looker
+explore: tabla_derivada_looker_ej {}
